@@ -1,7 +1,7 @@
 # Full Stack Open
 2023
 
-Tämä repo sisältää Helsingin Avoimen yliopistona Full Stack Open kurssin vastaukseni
+Tämä repo sisältää Helsingin Avoimen yliopiston Full Stack Open kurssin vastaukseni
 
 # Suoritetu osat:
 
