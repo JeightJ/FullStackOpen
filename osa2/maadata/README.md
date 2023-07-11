@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# API-KEY AND .ENV
+
+This app was made with Openweathermaps API, and thus the personal API-key isn't included in the files. For the app to function correctly, you can create .env in the "maadata" -folder in osa2 (osa2/maadata). After creating the .env -file, paste your own Openweather api-key with the following format:
+
+REACT_APP_API_KEY=*your_own_key*
+
 ## Available Scripts
 
 In the project directory, you can run:
