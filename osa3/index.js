@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
   res.send('Backend online and running (fast af boiii)');
 });
 
+// Staattisen sisällön palvelu
+app.use(express.static('build'))
+
 app.get('/api/persons', (request, response) => {
   response.json(persons)
 })
