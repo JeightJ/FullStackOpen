@@ -5,10 +5,8 @@ const app = express()
 app.use(cors());
 app.use(express.json())
 
-// Luodaan middleware, joka tarkistaa requestin. Jos requesti on post,
-// tulostetaan pyynnön runko (console.log(req.body);)
-// Välitetään pyyntö sitten morganille
-// En saanut tähän ratkaisua, joka tulostaisi tiedot yhdellä rivillä 
+// *** En saanut tähän ratkaisua, joka tulostaisi tiedot yhdellä rivillä ***
+// Jos pyyntö on post, välitetään tinylle sen mukana tulevat kontaktin tiedot
 app.use((req, res, next) => {
   if (req.method === 'POST') {
     console.log(req.body);
@@ -18,6 +16,11 @@ app.use((req, res, next) => {
 
 //Tinyn käyttö
 app.use(morgan('tiny'));
+
+// Juuri backendin renderiin viemistä varten
+app.get('/', (req, res) => {
+  res.send('Backend online and running (fast af boiii)');
+});
 
 app.get('/api/persons', (request, response) => {
   response.json(persons)
