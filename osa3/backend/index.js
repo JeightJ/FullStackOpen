@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 // Staattisen sisällön palvelu
-app.use(express.static('build'))
+app.use(express.static('puhelinluettelo/build'));
 
 app.get('/api/persons', (request, response) => {
   response.json(persons)
